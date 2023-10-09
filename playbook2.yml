@@ -1,0 +1,13 @@
+---
+- name: create file and put some content in the file 
+  hosts: all 
+  tasks:
+    - name: create a file 
+      file:
+        name: /home/ubuntu/file100
+        state: touch
+    - name: place some content in the file 
+      copy:
+        content: "sunil"
+        dest: /home/ubuntu/file100
+...          
